@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bin2Dec</title>
+    <link rel="stylesheet" href="Bin.css">
+</head>
+<body>
+    <div class="conver">
+        <h1>Bin2Dudy</h1>
+        <h3>Conversor de numero Binário</h3>
+        <p>Binário: <input type="text" id="by" onchange="convert()" placeholder="Insira um numero Binário"/></p>
+        <p>Decimal: <input type="text" id="dy" readonly /></p>
+        <p><input type="button" value="CONVERTER" onclick="convert()"></p>
+        <!--readonly: Deixar o campo só para leitura
+        onchange: é usada para que seja realizada determinada acao após alguma mudanca
+        onclick:Quando o elemento for clicado-->
+    </div>
+    <script>
+function convert() {
+    const binary = document.getElementById('by').value;
+    const decimal = parseInt(binary, 2);
+    document.getElementById('dy').value = decimal;
+    return true;
+}
+    </script>
+</body>
+</html>
